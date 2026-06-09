@@ -1253,7 +1253,22 @@ section{padding:90px 6vw;}
   padding:11px 10px 10px;position:relative;z-index:1;
 }
 .cover-line{width:55%;height:1.5px;border-radius:1px;background:rgba(255,255,255,0.3);flex-shrink:0;}
-.cover-icon{font-size:38px;flex-shrink:0;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.35));}
+
+.cover-icon{
+  font-size:38px;
+  flex-shrink:0;
+  filter:drop-shadow(0 1px 3px rgba(0,0,0,0.35));
+}
+
+/* enable image logos */
+
+.cover-icon img,
+.cover-icon i{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+}
+
 .cover-sym{
   font-family:'Syne',sans-serif;font-size:18px;font-weight:800;
   color:rgba(255,255,255,0.96);text-shadow:0 2px 6px rgba(0,0,0,0.4);
@@ -2910,7 +2925,7 @@ filterBg:'#1a3d6e',
 
 books:[
 {
-icon:'☁️',
+icon:'<i class="devicon-amazonwebservices-plain-wordmark colored"></i>',
 sym:'AWS',
 name:'Amazon Web Services',
 desc:'Cloud platform for scalable infrastructure, storage and DevOps workloads.'
@@ -2964,7 +2979,7 @@ desc:'HTTP/HTTPS routing and traffic management.'
 },
 
 {
-icon:'☁️',
+icon:'<i class="devicon-amazonwebservices-plain-wordmark colored"></i>',
 sym:'ALB',
 name:'ALB Controller',
 desc:'Provisions AWS ALBs natively from Kubernetes Ingress objects.'
@@ -3041,7 +3056,54 @@ desc:'GitOps delivery syncing Kubernetes clusters with Git.'
 
 ]
 },
+{
+  id:'database',
+  label:'DATABASES',
+  icon:'🗄️',
+  filterBg:'#2563eb',
 
+  /* NEW UNIQUE COLOR THEME */
+
+filterBg:'#78a9ff',
+
+bg:'#5f8fc9',
+bg2:'#7da9df',
+
+shelfLight:'#b7d2ff',
+shelfDark:'#8fb8ff',
+
+  books:[
+
+    {
+      icon:'<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">',
+      sym:'My',
+      name:'MySQL',
+      desc:'Relational database for structured application data.'
+    },
+
+    {
+      icon:'<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">',
+      sym:'Mg',
+      name:'MongoDB',
+      desc:'NoSQL document database for scalable applications.'
+    },
+
+    {
+      icon:'<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">',
+      sym:'Pg',
+      name:'PostgreSQL',
+      desc:'Advanced open-source relational database system.'
+    },
+
+    {
+      icon:'<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg">',
+      sym:'Rd',
+      name:'Redis',
+      desc:'In-memory database for caching and fast performance.'
+    }
+
+  ]
+},
 {
 id:'iac',
 label:'IaC & Scripting',
@@ -3103,21 +3165,21 @@ desc:'Time-series metrics collection and alerting system.'
 },
 
 {
-icon:'📊',
+icon:'<img src="https://cdn.simpleicons.org/grafana/F46800" class="tech-logo">',
 sym:'Grf',
 name:'Grafana',
 desc:'Interactive dashboards visualizing infrastructure metrics.'
 },
 
 {
-icon:'🔭',
+icon:'<img src="https://cdn.simpleicons.org/newrelic" class="tech-logo">',
 sym:'NR',
 name:'New Relic',
 desc:'Full-stack APM with distributed tracing and anomaly detection.'
 },
 
 {
-icon:'☁️',
+icon:'<i class="devicon-amazonwebservices-plain-wordmark colored"></i>',
 sym:'CW',
 name:'CloudWatch',
 desc:'AWS monitoring for logs, metrics, alarms and dashboards.'
